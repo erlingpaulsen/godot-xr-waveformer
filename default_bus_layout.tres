@@ -1,0 +1,19 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://yh1n5g7doatp"]
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_xad8r"]
+resource_name = "LowPassFilter"
+cutoff_hz = 10000.0
+resonance = 0.7
+db = 1
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_ya8qf"]
+resource_name = "Reverb"
+predelay_msec = 100.0
+room_size = 0.5
+wet = 0.4
+
+[resource]
+bus/0/effect/0/effect = SubResource("AudioEffectLowPassFilter_xad8r")
+bus/0/effect/0/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectReverb_ya8qf")
+bus/0/effect/1/enabled = true
